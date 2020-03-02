@@ -13,6 +13,7 @@ public abstract class Warrior
       name = n;
       clique = sc;
       generateStats();
+      clique.toLowerCase();
    }
    
    public abstract void generateStats();
