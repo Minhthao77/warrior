@@ -195,17 +195,18 @@ public class WarriorDriver
       int y = random(size/2);
       display(arena);
       
-      System.out.println("1) Sort by IQ  2) Sort by Strength  3) Sort by Name");
+      System.out.println("1) Sort by IQ  2) Sort by Strength  3) Sort by Name  4) Skip");
       int opt = input.nextInt();
       
-      while(opt < 0 || opt >3)
+      while(opt < 0 || opt >4)
       {
-         System.out.println("1) Sort by IQ  2) Sort by Strength  3) Sort by Name");
+         System.out.println("1) Sort by IQ  2) Sort by Strength  3) Sort by Name  4) Skip");
          opt = input.nextInt();
       }
       
       selSort(arena, opt);
-      display(arena);
+      if(opt>0 && opt<4)
+         display(arena);
       
       if(arena[x].errorCheck() && arena[y].errorCheck())
       {
